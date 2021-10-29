@@ -16,8 +16,10 @@ print(spending_counter)
 
 top5 = spending_counter.most_common(5)
 
-catergories, count = zip(top5)
+catergories, count = zip(*top5)
 
 fig, ax = plt.subplots()
 ax.bar(catergories, count)
 ax.set_title('# of Purchases by Category')
+
+plt.show()
